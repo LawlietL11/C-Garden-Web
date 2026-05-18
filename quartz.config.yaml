@@ -259,7 +259,7 @@ plugins:
       subdir: plugin
     enabled: true
     options:
-      theme: dashboard
+      theme: dark-moss
 layout:
   groups:
     toolbar:
