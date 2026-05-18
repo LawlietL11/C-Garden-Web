@@ -259,7 +259,7 @@ plugins:
       subdir: plugin
     enabled: true
     options:
-      theme: dark-moss
+      theme: catppuccin
 layout:
   groups:
     toolbar:
