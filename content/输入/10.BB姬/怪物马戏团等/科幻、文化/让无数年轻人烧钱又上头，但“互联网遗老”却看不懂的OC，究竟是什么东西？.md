@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2025-08-30T18:04:30.848+08:00
-modified: 2026-05-18T23:31:26.703+08:00
+modified: 2026-05-19T01:34:47.463+08:00
 ---
 
 ---
@@ -48,8 +48,6 @@ modified: 2026-05-18T23:31:26.703+08:00
 
 与此同时，以OC为命题，结合各种艺术形式进行创作，也已成为一种显著趋势。**无论是OC相关的游戏、动画还是漫画，市面上都涌现出了越来越多的优秀作品。**
 
-![图片](data:image/svg+xml,%3C%3Fxml%20version='1.0'%20encoding='UTF-8'%3F%3E%3Csvg%20width='1px'%20height='1px'%20viewBox='0%200%201%201'%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3E%3C/title%3E%3Cg%20stroke='none'%20stroke-width='1'%20fill='none'%20fill-rule='evenodd'%20fill-opacity='0'%3E%3Cg%20transform='translate\(-249.000000,%20-126.000000\)'%20fill='%23FFFFFF'%3E%3Crect%20x='249'%20y='126'%20width='1'%20height='1'%3E%3C/rect%3E%3C/g%3E%3C/g%3E%3C/svg%3E)
-
 **CP同人展还有专门的OC街道**
 
 如果常关注BB姬的读者朋友，估计也能留意到过往的文章中，我们曾多次提及与“OC”相关的作品。
@@ -74,21 +72,21 @@ modified: 2026-05-18T23:31:26.703+08:00
 
 所以，今天我们就拨开争议与迷雾，浅聊一下关于“OC”的话题。 
 
+---
+
 为了理解OC的含义，我们不妨从广义上概念的入手：OC，可以泛指创作者自行设计和创作的任何角色。
 
-举一个圈内人向大众解释时常用的例子吧—— \*\*你可以说，林黛玉是曹雪芹的OC。\*\*因为历史上并没有这一号人物，她的性格、经历等都是曹雪芹这位创作者所塑造的。
+举一个圈内人向大众解释时常用的例子吧—— **你可以说，林黛玉是曹雪芹的OC。** 因为历史上并没有这一号人物，她的性格、经历等都是曹雪芹这位创作者所塑造的。
 
 反观《三国演义》，里面的出场角色就不能算做罗贯中的OC。因为其中大部分角色都是基于真实的历史人物，但每个人又与历史中的本人存在差异，所以更确切的归类应该是历史同人。
 
 ![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/0rjdr8MXDibiaiceCMKX44OqOcVXnAvbVYMdArNwhZmMdF1YhnJlNzp3ds2JwIictN885nRRuayMibvAAP5eEFEXYfA/640?wx_fmt=png\&from=appmsg\&tp=wxpic\&wxfrom=5\&wx_lazy=1)
 
-然而，在当下的二次元语境中，OC的含义则更为聚焦： \*\*它通常指个人创作者独立构思、设计的角色。\*\*这类角色的个人化色彩更浓厚，其创作的动机也更倾向于非商业化的“为爱发电”。
+然而，在当下的二次元语境中，OC的含义则更为聚焦： **它通常指个人创作者独立构思、设计的角色。** 这类角色的个人化色彩更浓厚，其创作的动机也更倾向于非商业化的“为爱发电”。
 
 **根据我的观察，区分OC与广义上的传统原创角色还有一个关键的维度，即创作者对“故事”与“角色” 的侧重程度。**
 
 传统的原创角色，多数时候角色的诞生是服务于故事的。到某个剧情的节点，需要某个具备某种特质的角色来推动故事剧情时，这个人物就会水到渠成地出现。
-
-![图片](data:image/svg+xml,%3C%3Fxml%20version='1.0'%20encoding='UTF-8'%3F%3E%3Csvg%20width='1px'%20height='1px'%20viewBox='0%200%201%201'%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3E%3C/title%3E%3Cg%20stroke='none'%20stroke-width='1'%20fill='none'%20fill-rule='evenodd'%20fill-opacity='0'%3E%3Cg%20transform='translate\(-249.000000,%20-126.000000\)'%20fill='%23FFFFFF'%3E%3Crect%20x='249'%20y='126'%20width='1'%20height='1'%3E%3C/rect%3E%3C/g%3E%3C/g%3E%3C/svg%3E)
 
 ![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/0rjdr8MXDibiaiceCMKX44OqOcVXnAvbVYMfe8W7JDB2jY0eHXRWJbMfFfGrqMDRFBFc0GT8buUtWZCEqFIuWljyQ/640?wx_fmt=png\&from=appmsg\&tp=wxpic\&wxfrom=5\&wx_lazy=1)
 
