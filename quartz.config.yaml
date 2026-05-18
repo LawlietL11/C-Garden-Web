@@ -227,7 +227,7 @@ plugins:
         GitHub: https://github.com/jackyzha0/quartz
         Discord Community: https://discord.gg/cRFFHYye7t
   - source: github:quartz-community/recent-notes
-    enabled: false
+    enabled: true
     options:
       title = 最近笔记 limit = 5 showTags = false: title = 最近笔记
       title = 最近笔记: ""
