@@ -1,13 +1,13 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: Quartz 5
-  pageTitleSuffix: ""
+  pageTitle: C-Garden
+  pageTitleSuffix: C Site
   enableSPA: true
   enablePopovers: true
   analytics:
     provider: plausible
-  locale: en-US
-  baseUrl: c-garden-c87gjhjpl-lawliet-l11-s-projects.vercel.app
+  locale: zh-CN
+  baseUrl: https://c-garden-web.vercel.app/
   ignorePatterns:
     - private
     - templates
@@ -94,7 +94,7 @@ plugins:
       renderEngine: katex
     order: 80
   - source: github:quartz-community/citations
-    enabled: false
+    enabled: true
     order: 85
   - source: github:quartz-community/hard-line-breaks
     enabled: true
@@ -103,7 +103,7 @@ plugins:
     enabled: false
     order: 91
   - source: github:quartz-community/roam
-    enabled: false
+    enabled: true
     order: 92
   - source: github:quartz-community/remove-draft
     enabled: true
@@ -209,7 +209,7 @@ plugins:
       priority: 5
       condition: not-index
   - source: github:quartz-community/comments
-    enabled: false
+    enabled: true
     options:
       provider: giscus
       options: {}
@@ -223,7 +223,7 @@ plugins:
         GitHub: https://github.com/jackyzha0/quartz
         Discord Community: https://discord.gg/cRFFHYye7t
   - source: github:quartz-community/recent-notes
-    enabled: false
+    enabled: true
   - source: github:quartz-community/spacer
     enabled: true
     options: {}
@@ -259,7 +259,7 @@ plugins:
       subdir: plugin
     enabled: true
     options:
-      theme: default
+      theme: dashboard
 layout:
   groups:
     toolbar:
@@ -272,7 +272,9 @@ layout:
         beforeBody: []
         left: []
         right: []
-    content: {}
+    content:
+      exclude:
+        - reader-mode
     folder:
       exclude:
         - reader-mode
@@ -283,5 +285,8 @@ layout:
         - reader-mode
       positions:
         right: []
-    canvas: {}
+    canvas:
+      exclude:
+        - reader-mode
+      template: minimal
     bases: {}
