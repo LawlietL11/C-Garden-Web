@@ -212,7 +212,11 @@ plugins:
     enabled: true
     options:
       provider: giscus
-      options: {}
+      options: '{  "repo": "LawlietL11/C-Garden-Web",   "repoId": "你的
+        repoId",   "category": "Announcements",   "categoryId": "你的
+        categoryId",   "mapping": "pathname",   "strict":
+        true,   "reactionsEnabled": true,   "inputPosition": "bottom",   "lang":
+        "zh-CN"}'
     layout:
       position: afterBody
       priority: 10
@@ -224,6 +228,11 @@ plugins:
         Discord Community: https://discord.gg/cRFFHYye7t
   - source: github:quartz-community/recent-notes
     enabled: true
+    options:
+      title = 最近笔记 limit = 5 showTags = false: title = 最近笔记
+      title = 最近笔记: ""
+      limit = 5: ""
+      showTags = false: ""
   - source: github:quartz-community/spacer
     enabled: true
     options: {}
@@ -259,7 +268,7 @@ plugins:
       subdir: plugin
     enabled: true
     options:
-      theme: catppuccin
+      theme: rose-pine
 layout:
   groups:
     toolbar:
