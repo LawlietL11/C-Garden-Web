@@ -224,12 +224,13 @@ plugins:
   - source: github:quartz-community/recent-notes
     enabled: true
     options:
-      Position = right: ""
-      Priority = 40: ""
-      Display mode = all: ""
       title: 最近笔记
-      limit: "5"
-      showTags: "false"
+      limit: 5
+      showTags: false
+    layout:
+      position: right
+      priority: 40
+      display: all
   - source: github:quartz-community/footer
     enabled: true
     options:
