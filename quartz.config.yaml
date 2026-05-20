@@ -1,13 +1,13 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
   pageTitle: C-Garden
-  pageTitleSuffix: -Site
+  pageTitleSuffix: " | C-Garden"
   enableSPA: true
   enablePopovers: true
   analytics:
     provider: plausible
   locale: zh-CN
-  baseUrl: c-garden-web.vercel.app/
+  baseUrl: c-garden-web.vercel.app
   ignorePatterns:
     - private
     - templates
