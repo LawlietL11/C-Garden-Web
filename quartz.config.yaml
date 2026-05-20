@@ -277,7 +277,7 @@ plugins:
       subdir: plugin
     enabled: true
     options:
-      theme: rose-pine-moon
+      theme: dark-clarity
 layout:
   groups:
     toolbar:
