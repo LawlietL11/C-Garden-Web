@@ -1,3 +1,63 @@
 @use "./variables.scss" as *;
 
 // put your custom CSS here!
+
+/* 基础视窗修正：减少页面两侧黑边和横向溢出 */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  background: var(--light);
+}
+
+#quartz-root {
+  min-height: 100vh;
+  background: var(--light);
+}
+
+/* 正文阅读体验 */
+article {
+  max-width: $pageWidth;
+  line-height: 1.75;
+  font-size: 1.02rem;
+}
+
+/* 正文图片美化 */
+article img {
+  max-width: 100%;
+  border-radius: 10px;
+  display: block;
+  margin: 1.2rem auto;
+}
+
+/* 代码块、引用、卡片类元素不要贴边 */
+article pre,
+article blockquote {
+  border-radius: 10px;
+}
+
+/* 左侧目录不要显得太重 */
+.sidebar.left {
+  font-size: 0.95rem;
+}
+
+/* Explorer 层级间距稍微压缩 */
+.explorer {
+  line-height: 1.45;
+}
+
+/* 右侧栏稍微弱化，避免抢正文注意力 */
+.sidebar.right {
+  font-size: 0.92rem;
+  opacity: 0.96;
+}
+
+/* Graph / Backlinks / Recent notes 这类卡片视觉统一 */
+.graph,
+.backlinks,
+.recent-notes {
+  border-radius: 12px;
+}
