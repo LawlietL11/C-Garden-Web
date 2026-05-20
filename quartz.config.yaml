@@ -114,7 +114,7 @@ plugins:
     options: {}
     order: 45
   - source: github:quartz-community/encrypted-pages
-    enabled: true
+    enabled: false
     options:
       iterations: 600000
       passwordField: password
@@ -231,9 +231,9 @@ plugins:
     enabled: true
     options:
       title = 最近笔记 limit = 5 showTags = false: title = 最近笔记
-      title = 最近笔记: ""
-      limit = 5: ""
-      showTags = false: ""
+      title = 最近笔记: Position = right
+      limit = 5: Priority = 40
+      showTags = false: Display mode = all
   - source: github:quartz-community/spacer
     enabled: true
     options: {}
@@ -282,9 +282,6 @@ layout:
         beforeBody: []
         left: []
         right: []
-    content:
-      exclude:
-        - reader-mode
     folder:
       exclude:
         - reader-mode
@@ -300,3 +297,6 @@ layout:
         - reader-mode
       template: minimal
     bases: {}
+    content:
+      exclude:
+        - reader-mode
