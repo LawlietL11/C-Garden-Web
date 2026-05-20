@@ -50,24 +50,24 @@ plugins:
         - git
         - filesystem
     order: 10
-- source: github:quartz-community/comments
-  enabled: true
-  options:
-    provider: giscus
+  - source: github:quartz-community/comments
+    enabled: true
     options:
-      repo: LawlietL11/C-Garden-Web
-      repoId: R_kgDOSgs7IQ
-      category: Announcements
-      categoryId: DIC_kwDOSgs7Ic4C9Vdd
-      mapping: pathname
-      strict: false
-      reactionsEnabled: true
-      inputPosition: bottom
-      lang: zh-CN
-  layout:
-    position: afterBody
-    priority: 10
-    display: all
+      provider: giscus
+      options:
+        repo: LawlietL11/C-Garden-Web
+        repoId: R_kgDOSgs7IQ
+        category: Announcements
+        categoryId: DIC_kwDOSgs7Ic4C9Vdd
+        mapping: pathname
+        strict: false
+        reactionsEnabled: true
+        inputPosition: bottom
+        lang: zh-CN
+    layout:
+      position: afterBody
+      priority: 10
+      display: all
   - source: github:quartz-community/recent-notes
     enabled: true
     options:
