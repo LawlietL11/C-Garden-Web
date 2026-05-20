@@ -206,3 +206,176 @@ footer::before {
     backdrop-filter: none;
   }
 }
+
+/* ========================================================================== */
+/* C-Garden layout: fixed sidebars, inner scroll, graph modal, pdf viewer */
+/* ========================================================================== */
+
+@media all and ($desktop) {
+  :root {
+    --cg-left-sidebar-width: #{$sidePanelWidth};
+    --cg-right-sidebar-width: #{$sidePanelWidth};
+    --cg-sidebar-collapsed-width: 48px;
+  }
+
+  :root.cg-left-collapsed {
+    --cg-left-sidebar-width: var(--cg-sidebar-collapsed-width);
+  }
+
+  :root.cg-right-collapsed {
+    --cg-right-sidebar-width: var(--cg-sidebar-collapsed-width);
+  }
+
+  .page {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+  }
+
+  .page > #quartz-body {
+    min-height: 100vh;
+    grid-template-columns:
+      var(--cg-left-sidebar-width)
+      minmax(0, 1fr)
+      var(--cg-right-sidebar-width);
+    transition: grid-template-columns 0.22s ease;
+  }
+
+  .page > #quartz-body .sidebar {
+    position: sticky;
+    top: 0;
+    height: 100dvh;
+    max-height: 100dvh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-gutter: stable;
+    box-sizing: border-box;
+    background: color-mix(in srgb, var(--light) 88%, transparent);
+    border-color: color-mix(in srgb, var(--lightgray) 85%, transparent);
+  }
+
+  .page > #quartz-body .sidebar.left {
+    border-right: 1px solid color-mix(in srgb, var(--lightgray) 85%, transparent);
+  }
+
+  .page > #quartz-body .sidebar.right {
+    border-left: 1px solid color-mix(in srgb, var(--lightgray) 85%, transparent);
+    opacity: 1;
+  }
+
+  :root[saved-theme="dark"] .page > #quartz-body .sidebar {
+    background: color-mix(in srgb, var(--light) 90%, transparent);
+  }
+
+  .center > article {
+    max-width: $pageWidth;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .center > .comments,
+  .comments {
+    max-width: $pageWidth;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* sidebar collapse buttons */
+  .sidebar-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    min-height: 2rem;
+    border: 1px solid var(--lightgray);
+    border-radius: 999px;
+    background: var(--light);
+    color: var(--darkgray);
+    cursor: pointer;
+    font-size: 1.1rem;
+    line-height: 1;
+    transition:
+      background 0.18s ease,
+      border-color 0.18s ease,
+      color 0.18s ease,
+      transform 0.18s ease;
+  }
+
+  .sidebar-toggle:hover {
+    color: var(--dark);
+    border-color: var(--secondary);
+    background: color-mix(in srgb, var(--light) 88%, var(--secondary));
+    transform: translateY(-1px);
+  }
+
+  .sidebar.left > .sidebar-toggle {
+    align-self: flex-end;
+    margin-bottom: 0.25rem;
+  }
+
+  .sidebar.right > .sidebar-toggle {
+    align-self: flex-start;
+    margin-bottom: 0.25rem;
+  }
+
+  :root.cg-left-collapsed .sidebar.left,
+  :root.cg-right-collapsed .sidebar.right {
+    padding-left: 0.45rem;
+    padding-right: 0.45rem;
+    gap: 0.5rem;
+  }
+
+  :root.cg-left-collapsed .sidebar.left > :not(.sidebar-toggle),
+  :root.cg-right-collapsed .sidebar.right > :not(.sidebar-toggle) {
+    display: none !important;
+  }
+
+  :root.cg-left-collapsed .sidebar.left > .sidebar-toggle,
+  :root.cg-right-collapsed .sidebar.right > .sidebar-toggle {
+    align-self: center;
+  }
+}
+
+/* Graph full-screen modal fix */
+.global-graph-outer.active {
+  display: block !important;
+  position: fixed !important;
+  inset: 0 !important;
+  width: 100vw !important;
+  height: 100dvh !important;
+  z-index: 100000 !important;
+  background: color-mix(in srgb, var(--light) 82%, transparent);
+  backdrop-filter: blur(10px);
+}
+
+.global-graph-outer.active > .global-graph-container {
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  width: min(1120px, 92vw) !important;
+  height: min(760px, 84dvh) !important;
+  transform: translate(-50%, -50%) !important;
+  border-radius: 18px !important;
+  border: 1px solid var(--lightgray) !important;
+  background: var(--light) !important;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.22);
+}
+
+.global-graph-container canvas,
+.graph-container canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* PDF viewer */
+iframe.pdf,
+.pdf-viewer {
+  width: 100%;
+  height: min(82vh, 960px);
+  border: 1px solid var(--lightgray);
+  border-radius: 14px;
+  background: var(--light);
+}
+
