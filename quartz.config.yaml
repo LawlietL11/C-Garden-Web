@@ -41,15 +41,6 @@ configuration:
         highlight: rgba(143, 159, 169, 0.15)
         textHighlight: "#b3aa0288"
 plugins:
-  - source: github:quartz-community/created-modified-date
-    enabled: true
-    options:
-      defaultDateType: modified
-      priority:
-        - frontmatter
-        - git
-        - filesystem
-    order: 10
   - source: github:quartz-community/comments
     enabled: true
     options:
@@ -78,6 +69,15 @@ plugins:
       position: right
       priority: 40
       display: all
+  - source: github:quartz-community/created-modified-date
+    enabled: true
+    options:
+      defaultDateType: modified
+      priority:
+        - frontmatter
+        - git
+        - filesystem
+    order: 10
   - source: github:quartz-community/syntax-highlighting
     enabled: true
     options:
