@@ -26,7 +26,8 @@ export default (() => {
     const path = url.pathname as FullSlug
     const baseDir = fileData.slug === "404" ? path : pathToRoot(fileData.slug!)
     const iconPath = joinSegments(baseDir, "static/icon.png")
-
+    const sidebarToggleScriptPath = joinSegments(baseDir, "static/cg-sidebar-toggle.js")
+    
     // Url of current page
     const socialUrl =
       fileData.slug === "404" ? url.toString() : joinSegments(url.toString(), fileData.slug!)
@@ -98,6 +99,8 @@ export default (() => {
             return resource
           }
         })}
+
+        <script defer src={sidebarToggleScriptPath}></script>
       </head>
     )
   }
