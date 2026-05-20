@@ -1,63 +1,208 @@
 @use "./variables.scss" as *;
 
-// put your custom CSS here!
+/* ===== Global frame ===== */
 
-/* 基础视窗修正：减少页面两侧黑边和横向溢出 */
 html,
 body {
-  margin: 0;
-  padding: 0;
   width: 100%;
   min-height: 100%;
+  margin: 0;
+  padding: 0;
   overflow-x: hidden;
-  background: var(--light);
 }
 
-#quartz-root {
+body {
+  background-color: var(--light);
+  background-image:
+    linear-gradient(
+      rgba(250, 248, 248, 0.88),
+      rgba(250, 248, 248, 0.88)
+    ),
+    url("/static/site-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+:root[saved-theme="dark"] body {
+  background-image:
+    linear-gradient(
+      rgba(22, 22, 24, 0.9),
+      rgba(22, 22, 24, 0.9)
+    ),
+    url("/static/site-bg.jpg");
+}
+
+/* 让页面真正贴近视窗，而不是限制在中间固定宽度 */
+.page {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+/* 主体至少铺满视窗高度 */
+.page > #quartz-body {
   min-height: 100vh;
-  background: var(--light);
 }
 
-/* 正文阅读体验 */
-article {
+/* ===== Sidebars ===== */
+
+.page > #quartz-body .sidebar {
+  min-height: 100vh;
+  align-self: stretch;
+  backdrop-filter: blur(12px);
+  background: color-mix(in srgb, var(--light) 76%, transparent);
+}
+
+:root[saved-theme="dark"] .page > #quartz-body .sidebar {
+  background: color-mix(in srgb, var(--light) 82%, transparent);
+}
+
+/* 左侧标题上方网站图 */
+.page-title::before {
+  content: "";
+  display: block;
+  width: 88px;
+  height: 88px;
+  margin: 0 auto 1rem;
+  background-image: url("/static/site-logo.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 24px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.14);
+}
+
+/* 左侧标题居中一点 */
+.page-title {
+  text-align: center;
+}
+
+/* Explorer 稍微紧凑 */
+.explorer {
+  font-size: 0.94rem;
+  line-height: 1.45;
+}
+
+.explorer ul {
+  padding-left: 0.9rem;
+}
+
+/* ===== Center content ===== */
+
+.center {
+  width: 100%;
+}
+
+.center > article {
   max-width: $pageWidth;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1.5rem;
+}
+
+/* 评论区跟正文同宽居中 */
+.center > .comments,
+.comments {
+  max-width: $pageWidth;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1.5rem;
+}
+
+/* 正文保持左对齐，但整体居中 */
+article {
+  text-align: left;
   line-height: 1.75;
   font-size: 1.02rem;
 }
 
-/* 正文图片美化 */
+/* 标题更像正式文章 */
+article h1,
+article h2,
+article h3 {
+  letter-spacing: -0.02em;
+}
+
+article h2 {
+  margin-top: 2.2rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--lightgray);
+}
+
+/* 图片更柔和 */
 article img {
-  max-width: 100%;
-  border-radius: 10px;
   display: block;
-  margin: 1.2rem auto;
+  max-width: 100%;
+  margin: 1.25rem auto;
+  border-radius: 14px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
 }
 
-/* 代码块、引用、卡片类元素不要贴边 */
-article pre,
-article blockquote {
-  border-radius: 10px;
+/* 引用块、callout 统一圆角 */
+article blockquote,
+.callout {
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--light) 92%, var(--tertiary));
 }
 
-/* 左侧目录不要显得太重 */
-.sidebar.left {
-  font-size: 0.95rem;
+/* ===== Right sidebar cards ===== */
+
+.sidebar.right > * {
+  margin-bottom: 1.25rem;
 }
 
-/* Explorer 层级间距稍微压缩 */
-.explorer {
-  line-height: 1.45;
-}
-
-/* 右侧栏稍微弱化，避免抢正文注意力 */
-.sidebar.right {
-  font-size: 0.92rem;
-  opacity: 0.96;
-}
-
-/* Graph / Backlinks / Recent notes 这类卡片视觉统一 */
-.graph,
+.graph，
 .backlinks,
 .recent-notes {
-  border-radius: 12px;
+  border-radius: 16px;
+}
+
+/* 最近文章不要太抢眼 */
+.recent-notes h3,
+.recent-notes li h3 {
+  font-size: 0.95rem;
+  line-height: 1.35;
+  margin: 0.35rem 0;
+}
+
+/* ===== Footer temporary override ===== */
+
+footer {
+  max-width: $pageWidth;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem 1.5rem;
+  font-size: 0;
+  text-align: center;
+}
+
+footer::before {
+  content: "Created by Cui © 2026";
+  font-size: 0.9rem;
+  color: var(--gray);
+}
+
+/* ===== Mobile ===== */
+
+@media all and (max-width: 800px) {
+  body {
+    background-attachment: scroll;
+  }
+
+  .center > article,
+  .center > .comments,
+  .comments {
+    padding: 0 1rem;
+  }
+
+  .page-title::before {
+    width: 64px;
+    height: 64px;
+    border-radius: 18px;
+  }
+
+  .page > #quartz-body .sidebar {
+    min-height: unset;
+    backdrop-filter: none;
+  }
 }
