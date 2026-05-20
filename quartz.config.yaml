@@ -43,6 +43,17 @@ configuration:
 plugins:
   - source: github:quartz-community/graph
     enabled: true
+    options:
+      localGraph:
+        depth: 2
+        drag: true
+        zoom: true
+        showTags: true
+      globalGraph:
+        depth: -1
+        drag: true
+        zoom: true
+        showTags: true
     layout:
       position: right
       priority: 10
