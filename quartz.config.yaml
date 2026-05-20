@@ -221,19 +221,21 @@ plugins:
     layout:
       position: afterBody
       priority: 10
+  - source: github:quartz-community/recent-notes
+    enabled: true
+    options:
+      Position = right: ""
+      Priority = 40: ""
+      Display mode = all: ""
+      title: 最近笔记
+      limit: "5"
+      showTags: "false"
   - source: github:quartz-community/footer
     enabled: true
     options:
       links:
         GitHub: https://github.com/jackyzha0/quartz
         Discord Community: https://discord.gg/cRFFHYye7t
-  - source: github:quartz-community/recent-notes
-    enabled: true
-    options:
-      title = 最近笔记 limit = 5 showTags = false: title = 最近笔记
-      title = 最近笔记: Position = right
-      limit = 5: Priority = 40
-      showTags = false: Display mode = all
   - source: github:quartz-community/spacer
     enabled: true
     options: {}
