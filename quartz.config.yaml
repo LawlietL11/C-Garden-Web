@@ -57,7 +57,7 @@ plugins:
       options:
         repo: "LawlietL11/C-Garden-Web"
         repoId: "R_kgDOSgs7IQ"
-        category: "Announcements"
+        category: "Show and tell"
         categoryId: "DIC_kwDOSgs7Ic4C9Vdd"
         mapping: "pathname"
         strict: false
