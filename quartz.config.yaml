@@ -41,33 +41,6 @@ configuration:
         highlight: rgba(143, 159, 169, 0.15)
         textHighlight: "#b3aa0288"
 plugins:
-  - source: github:quartz-community/recent-notes
-    enabled: true
-    options:
-      Position = right: ""
-      Priority = 40: ""
-      Display mode = all: ""
-      title: 最近笔记
-      limit: "5"
-      showTags: "false"
-- source: github:quartz-community/comments
-  enabled: true
-  options:
-    provider: giscus
-    options:
-      repo: LawlietL11/C-Garden-Web
-      repoId: R_kgDOSgs7IQ
-      category: Announcements
-      categoryId: DIC_kwDOSgs7Ic4C9Vdd
-      mapping: pathname
-      strict: false
-      reactionsEnabled: true
-      inputPosition: bottom
-      lang: zh-CN
-  layout:
-    position: afterBody
-    priority: 10
-    display: all
   - source: github:quartz-community/created-modified-date
     enabled: true
     options:
@@ -235,6 +208,28 @@ plugins:
       position: beforeBody
       priority: 5
       condition: not-index
+  - source: github:quartz-community/comments
+    enabled: true
+    options:
+      provider: giscus
+      options: '{   "repo": "LawlietL11/C-Garden-Web",   "repoId":
+        "R_kgDOSgs7IQ",   "category": "Announcements",   "categoryId":
+        "DIC_kwDOSgs7Ic4C9Vdd",   "mapping": "pathname",   "strict":
+        "0",   "reactionsEnabled": "1",   "emitMetadata":
+        "0",   "inputPosition": "bottom",   "theme":
+        "preferred_color_scheme",   "lang": "zh-CN" }'
+    layout:
+      position: afterBody
+      priority: 10
+  - source: github:quartz-community/recent-notes
+    enabled: true
+    options:
+      Position = right: ""
+      Priority = 40: ""
+      Display mode = all: ""
+      title: 最近笔记
+      limit: "5"
+      showTags: "false"
   - source: github:quartz-community/footer
     enabled: true
     options:
