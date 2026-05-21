@@ -1,7 +1,7 @@
 ---
 publish: true
 created: 2025-08-30T08:14:55.791+08:00
-modified: 2026-05-22T03:40:06.646+08:00
+modified: 2026-05-22T07:13:22.408+08:00
 tags:
   - 启示
   - 命运
@@ -11,7 +11,7 @@ tags:
 
 ![[【2.🖼️其他资源】/【图片】/【🎨插图资源】/黄昏.jpg]]
 
-> [!tip] # The Road Not Taken 未 选 择 的 路
+> [!abstract] # The Road Not Taken 未 选 择 的 路
 >
 > _by Robert Frost （美）弗罗斯特_
 >
